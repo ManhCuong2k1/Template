@@ -24,36 +24,33 @@ main {
 .flex {
     display: flex;
 }
-.flex .form {
+.form {
     width: 40%;
     background-color: rgba(233,61,61,0);
     border-radius: 6px;
     border:1px solid white;
 }
-.flex .form:hover {
-    /* background-color: ; */
-}
 .flex .form .title {
     text-align: center;
 }
-.flex .form .title h3 {
+.form .title h3 {
     color: white;
     font-size: 21px;
 }
-.flex .form .timergird {
+.form .timergird {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     color: white;
 }
-.flex .form .timergird .timer {
+.form .timergird .timer {
     text-align: center;
 }
-.flex .form .timergird .timer h3 {
+.form .timergird .timer h3 {
     font-size: 14px;
     text-transform: uppercase;
 }
-.flex .form .timergird p {
+.form .timergird p {
     background: rgba(255,33,100,1);
     width: 70px;
     height: 70px;
@@ -64,79 +61,77 @@ main {
     border-radius: 6px;
     margin: 0 5px;
 }
-.flex .form form {
+.form form {
     padding: 0 50px;
     margin: 20px 0px;
 }
-.flex .form form input {
+.site-name {
+    background-color: #ff2164;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 34px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+.form form input {
     width: 296px;
     font-size: 16px;
     border-radius: 5px;
-    /* border: 1px solid rgba(112,112,112,1); */
     border: 1px solid white;
-    padding: 13px 5px;
-    /* background-color: rgba(61,61,61,1); */
+    padding: 18px 0px 18px 12px;
     background-color: white;
     color: rgba(0,0,0,1);
-    margin-bottom: 20px;
-    /* color: white; */
+    margin-bottom: 36px;
 }
-.flex .form form input:focus {
+.form form input:focus {
     outline: none;
 }
-.flex .form form input#submit {
+.form form button {
     background-color: rgba(255,33,100,1);
     border: 1px solid rgba(255,33,100,1);
     width: 100%;
     color: white;
     font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 18px 0px 18px 12px;
+    margin-bottom: 36px;
 }
-.flex .form form input#submit:hover {
+.form form button:hover {
     cursor: pointer;
+}
+.form form button:focus {
+    outline: none;
+}
+.date {
+    border: 0;
+    width: 100%;
+    text-align: center;
 }
 .content {
     padding-left: 65px;
+    margin-top: 20px;
 }
 .content .content-title {
     padding-bottom: 36px;
-    border-bottom: 3px solid #fff;
+    text-align: center;
 }
 .content .content-title h1 {
     margin: 0px;
     color: white;
 }
-.content .content-title h1:first-child{
+.content .content-title h1{
     font-size: 36px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-.content .content-title h1:last-child {
-    font-size: 45px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 .content .text p {
     font-size: 18px;
     color: white;
     font-weight: 700;
     margin-top: 20px;
-}
-.content .button button{
-    background-color: rgba(233,61,61,0);
-    padding: 15px 55px;
-    font-size: 20px;
-    font-weight: 700;
-    border: 1px solid;
-    color: white;
-    transition: 0.3s ease all;
-    border-radius: 4px;
-}
-.content .button button:focus {
-    outline: none;
-}
-.content .button button:hover {
-    cursor: pointer;
-    background-color: rgba(255,33,100,1);
-    border-color: rgba(255,33,100,1);
 }
 .flex .content {
     width: 60%;

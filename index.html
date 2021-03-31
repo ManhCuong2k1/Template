@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 </head>
 <body>
     <main>
@@ -17,26 +18,23 @@
                 <div class="title">
                     <h3>ĐĂNG KÝ ĐỂ NHẬN QUÀ</h3>
                 </div>
-                <form>
-                    <!-- <label for="fname">First Name</label> -->
-                    <input type="text" id="name" name="name" placeholder="NickName" required> 
-                    <!-- <p class="err" id="error_name"></p> -->
-                
-                    <!-- <label for="lname">Last Name</label> -->
-                    <!-- <input type="text" id="email" name="email" placeholder="Nhập email" required>
-                    <p class="err" id="error_email"></p> -->
-                
-                    <!-- <label for="country">Country</label> -->
-                    <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+                <form id="test-form" method="GET" action="">
+
+                    <div class="site-name">BOX88.CLUB</div>
+
+                    <input type="text" id="name" name="Nick_Name" placeholder="NickName"> 
+                    <p class="err" id="error_name"></p>
+
+                    <input type="text" id="phone" name="Phone" placeholder="Nhập số điện thoại">
                     <p class="err" id="error_phone"></p>
                 
-                    <input type="button" id="submit" onclick="validate();" value="Gửi thông tin" >
+                    <button type="submit" id="submit-form">Gửi thông tin</button>
                 </form>
             </div>
             <div class="content">
                 <div class="content-title">
                     <h1>HỆ THỐNG ĐANG BẢO TRÌ</h1>
-                    <div class="form">
+                    <div class="form date">
                         <div class="timergird">
                             <div class="timer">
                                 <h3>Ngày</h3>
@@ -47,7 +45,6 @@
                                 <h3>Giờ</h3>
                                 <p id="hour"></p>
                             </div>
-                            
                             <div class="timer">
                                 <h3>Phút</h3>
                                 <p id="minute"></p>
@@ -62,9 +59,9 @@
                 <div class="text">
                     <p>Bạn vui lòng điền thông tin, hệ thống sẽ tự động gửi tặng gitcode ngẫu nhiên từ 10k đến 200k</p>
                 </div>
-                <div class="button">
+                <!-- <div class="button">
                     <button>Click Here</button>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container flex block">
@@ -97,7 +94,9 @@
             </div>
         </div>
     </main>
-   
+    <script src="./assets/js/app.js"></script>
+    
+    
 </body>
-<script src="./assets/js/app.js"></script>
+
 </html>

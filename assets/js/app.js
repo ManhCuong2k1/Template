@@ -19,36 +19,48 @@ document.getElementById("second").innerHTML = seconds;
 
 // check form
 
-function validate() {
-    var flag = true;
+// function validate() {
+//     var flag = true;
+//     var name = document.getElementById('name').value;
+//     if(name === '') {
+//         flag = false;
+//         document.getElementById('error_name').innerHTML = 'Tên không để trống'; 
+//     } else {
+//         document.getElementById('error_name').innerHTML = '';
+//         document.getElementById('name').value = '';
+//     }
 
-    var name = document.getElementById('name').value;
-    if(name === '' || name.length < 5) {
-        flag = false;
-        document.getElementById('error_name').innerHTML = 'Tên không để trống và trên 5 ký tự'; 
-    } else {
-        document.getElementById('error_name').innerHTML = '';
-    }
+//     var phone = document.getElementById('phone').value;
+//     var regPhone = /^[0-9]{10}$/;
+//     if(!regPhone.test(phone)) {
+//         flag = false;
+//         document.getElementById('error_phone').innerHTML = 'Số điện thoại không để trống và phải đủ 10 số';
+//     } else {
+//         document.getElementById('error_phone').innerHTML = '';
+//         document.getElementById('phone').value = '';
+//     }
+//     return flag;
+// }
 
-    var email = document.getElementById('email').value;
-    var reg = /^[a-zA-Z0-9.!@#$%^&*(){|}]+@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*$/;
-    if(!reg.test(email)) {
-        flag = false;
-        document.getElementById('error_email').innerHTML = 'Email phải đúng định dạng';     
-    } else {
-        document.getElementById('error_email').innerHTML = '';
-    }
-
-    var phone = document.getElementById('phone').value;
-    var regPhone = /^[0-9]{10}$/;
-    if(!regPhone.test(phone)) {
-        flag = false;
-        document.getElementById('error_phone').innerHTML = 'Số điện thoại không để trống và phải đủ 10 số';
-    } else {
-        document.getElementById('error_phone').innerHTML = '';
-    }
-
-    return flag;
-}
-
-  
+$(document).ready(function() { 
+    var submit = $("button[type='submit']");
+    submit.click(function() {
+        var data = $('form#test-form').serialize();
+        $.ajax({
+            type : 'GET', 
+            url : 'https://script.google.com/macros/s/AKfycby9dyT9MRYcsGN0sBh1uJnyu-PJPPFHmLTKM0ElFoL8wx_W3L0/exec',
+            dataType:'json',
+            crossDomain : true,
+            data : data,
+            success : function(data) { 
+                if(data == 'false') 
+                    {
+                        alert('Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng');
+                    }else{
+                        alert('Đã thêm dữ liệu vào Form');
+                    }
+                }
+            });
+        return false;
+    });
+});
